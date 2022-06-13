@@ -1,4 +1,5 @@
-from random import choice
+from importaciones.import_file import choice
+
 def alternador_turnos(turno,jugadores):
   """
   """

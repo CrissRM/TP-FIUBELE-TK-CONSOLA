@@ -1,5 +1,5 @@
 import tkinter as tk
-from utils.estilos_formatos import estilos
+from helpers.estilos_formatos import estilos
 
 def Frame(padre):
   Frame = tk.Frame(

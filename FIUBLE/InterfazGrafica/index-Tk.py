@@ -1,7 +1,7 @@
 import tkinter as tk
 from componentes.MsgBox import msg_error, msg_info, msg_warning
 from componentes.FrameHidden import FrameHidden
-from utils.estilos_formatos import estilos
+from helpers.estilos_formatos import estilos
 from formularios.formulario_registro import formulario_registro
 from formularios.formulario_ingreso import formulario_ingreso
 from componentes.Label import Label

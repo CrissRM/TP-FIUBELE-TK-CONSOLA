@@ -1,13 +1,4 @@
-import os
-from time import time
-from random import choice
-from initialSetting.datos_iniciales import condiciones_iniciales
-from helpers.alternador_turnos import alternador_turnos
-from helpers.contar_puntos import contar_puntos
-from helpers.contabilizar_puntos import contabilizar_puntos
-from helpers.parcial_juego import parcial_juego
-from flujo_juego.app import app
-
+from importaciones.import_file import os,time,choice,condiciones_iniciales,alternador_turnos,contar_puntos,contabilizar_puntos,parcial_juego,application
 
 def inicial_juego(jugadores):
   os.system("clear")
@@ -29,7 +20,7 @@ def inicial_juego(jugadores):
     
     datos_iniciales["turno"] = turno
     
-    ronda_terminada = app(datos_iniciales)
+    ronda_terminada = application(datos_iniciales)
       
     ronda_terminada["inicia_juego"] = inicia_juego
       

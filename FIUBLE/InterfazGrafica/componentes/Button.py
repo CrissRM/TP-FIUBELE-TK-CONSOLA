@@ -1,5 +1,5 @@
-import tkinter as tk
 from estilos_formatos import button_style
+import tkinter as tk
 
 def Button(estilos,comando,arg): 
   

@@ -1,11 +1,4 @@
-from componentes.Label import Label
-from componentes.Entry import Entry
-from componentes.Frame import Frame
-from componentes.FrameHidden import FrameHidden
-from componentes.Button import Button
-from estilos_formatos import estilos,style_label,style_button,style_entry
-from funcionalidadButtonTk.actions_button import volver,guardar
-
+from importaciones.import_file import Label,Entry,Frame,FrameHidden,Button,style_button,style_entry,style_label,estilos,volver,guardar
 
 def formulario_registro(root,btn_registro,btn_ingreso):
   form_registro = FrameHidden(root)

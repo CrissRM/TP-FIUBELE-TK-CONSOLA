@@ -1,5 +1,7 @@
+
 def obtener_palabras_validas(CANT_LETRAS):
   archivo = open("C:/Users/Commodore/Desktop/TP-GITHUB/FIUBLE/InterfazGrafica/archivos_palabras/palabras.csv")
+  # archivo = open("FIUBLE/InterfazGrafica/archivos_palabras/palabras.csv")
   
   lista_palabra_secreta = []
   palabra = archivo.readline().split(",")[0]
