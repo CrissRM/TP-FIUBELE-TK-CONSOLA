@@ -1,6 +1,6 @@
 from componentes.modulos import Label,Entry,Frame,FrameHidden,Button
 from initialSetting.modulos import style_button,style_entry,style_label,estilos
-from funcionalidadButtonTk.modulos import volver
+from funcionalidadButtonTk.modulos import volver,guardar
 
 
 def formulario_registro(root,btn_registro,btn_ingreso):
