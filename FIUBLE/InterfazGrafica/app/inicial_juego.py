@@ -8,7 +8,7 @@ from app.app import application
 def inicial_juego(jugadores):
   os.system("clear")
   os.system("cls")
-  turno = choice(jugadores)
+  turno = choice(jugadores) 
   
   init_jugadores = dict()
   
@@ -16,7 +16,9 @@ def inicial_juego(jugadores):
     init_jugadores.setdefault(jugador,condiciones_iniciales()["puntos_acomulados_jugador"])
   
   res="s"
-  while res =="s":
+  numero_partida = 0
+  while res =="s" and numero_partida<condiciones_iniciales()["max_partidas"]:
+    numero_partida +=1
     inicia_juego = time()
     turno =alternador_turnos(turno,jugadores)
       

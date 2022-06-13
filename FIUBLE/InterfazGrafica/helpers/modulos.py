@@ -11,3 +11,4 @@ from helpers.mensaje_para_usuario import mensaje_para_usurio
 from helpers.mensaje_turno_de import mensaje_turno_de
 from helpers.msg_puntos_parciales import msg_puntos_parciales
 from helpers.parcial_juego import parcial_juego
+from helpers.handler_files import archivo_open,archivo_close,formato_linea

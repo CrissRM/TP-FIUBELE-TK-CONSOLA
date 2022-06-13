@@ -4,7 +4,7 @@ from initialSetting.modulos import estilos,style_button,style_label,style_entry
 from formularios.modulos import formulario_registro,formulario_ingreso
 from funcionalidadButtonTk.modulos import volver
 from componentes.modulos import msg_error,msg_info,msg_warning,FrameHidden,Label,Button,Frame,Entry
-
+from initialSetting.modulos import condiciones_iniciales
 
 
 def btn_registrarse(not_argument):
@@ -19,6 +19,7 @@ def btn_ingresar(not_argument):
   ingresar["state"] = "disabled"
 
 def handler_cant(not_argument):
+  MAX_JUGADORES = condiciones_iniciales()["cantidad_jugadores"]
   try:
     cant = int(cant_entry.get())
   except ValueError:
@@ -26,13 +27,13 @@ def handler_cant(not_argument):
   else:
     if cant <= 0:
       msg_warning("No es un valor, válido")
-    elif cant<=2:
+    elif cant<=MAX_JUGADORES:
       jugadores = []
       cant_jugadores.pack_forget() 
       form_ingreso = formulario_ingreso(root,registro,ingresar,jugadores,cant,inicia_app)
       form_ingreso.pack()
     else:
-      msg_info("Por el momento, el juego está implementado para un máximo de 2 jugadores")
+      msg_info(f"Por el momento, el juego está implementado para un máximo de {MAX_JUGADORES} jugadores")
 
 root = tk.Tk()
 root.title("FIUBLE - SERPIENTE")
