@@ -1,3 +1,5 @@
+from helpers.formatear_palabra import formatear_palabra
+
 def formatear_ruta(ruta):
   path_file = ""
   for letter in ruta:
@@ -17,7 +19,7 @@ def obtener_palabras_validas(CANT_LETRAS):
 
   while palabra !="":
     if len(palabra) == CANT_LETRAS:
-      lista_palabra_secreta.append(palabra)
+      lista_palabra_secreta.append(formatear_palabra(palabra))
     palabra = archivo.readline().split(",")[0]
 
   archivo.close() 

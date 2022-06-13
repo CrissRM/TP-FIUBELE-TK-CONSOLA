@@ -2,6 +2,7 @@ from helpers.modulos import grabar_datos
 from componentes.modulos import msg_confirm,msg_error,msg_info,msg_warning
 from validadores.modulos import validar_nombre,validar_contrasenia,existe_usuario,inicio_sesion
 
+
 def volver(argumentos):
   frame_hidden,btn_registro,btn_ingreso = argumentos
   frame_hidden.pack_forget()
@@ -80,3 +81,4 @@ def guardar(argumentos):
           clave_entry_repeat.delete(0,"end")
         else:
           volver([form_registro,btn_registro,btn_ingreso])
+

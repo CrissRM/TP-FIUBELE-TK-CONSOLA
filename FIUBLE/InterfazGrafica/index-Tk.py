@@ -3,6 +3,7 @@ from app.app_consola import inicia_app
 from initialSetting.modulos import estilos,style_button,style_label,style_entry
 from formularios.modulos import formulario_registro,formulario_ingreso
 from funcionalidadButtonTk.modulos import volver
+from helpers.handler_files import archivo_open,archivo_close,formato_linea
 from componentes.modulos import msg_error,msg_info,msg_warning,FrameHidden,Label,Button,Frame,Entry
 from initialSetting.modulos import condiciones_iniciales
 
@@ -69,5 +70,6 @@ Button(style_button(cant_jugadores,"CONFIRMAR",0,1.5,"Releway",13,"normal",10,"n
 
 Button(style_button(cant_jugadores,"VOLVER",0,1.5,"Releway",13,"normal",10,"normal","back","left",5,10),volver,[cant_jugadores,registro,ingresar])
 #-------------------------------------------------------------------------------
-root.mainloop()
 
+
+root.mainloop()

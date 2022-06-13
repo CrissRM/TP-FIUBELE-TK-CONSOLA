@@ -16,19 +16,19 @@ def fin_juego(estadisticas_finales_jugadores):
   print("\n","*"*75)
   input("\n\nEnter para finalizar...")
   
-  #ESTO SE LEE:
+  #estadisticas_finales_jugadores ----> SE LEE:
   # LLAVE ---> JUGADOR
   #CLAVE --> LISTA DE 5 ELEMENTOS
-  # 1. PUNTOS ACOMULADOS
-  # 2. FECHA
-  # 3. HORA FINALIZACION
-  # 4. ACIERTOS
-  # 5. INTENTOS (VECES QUE INGRESO UNA PALABRA)
-  print(estadisticas_finales_jugadores)
+  # 0. PUNTOS ACOMULADOS
+  # 1. FECHA
+  # 2. HORA FINALIZACION
+  # 3. ACIERTOS
+  # 4. INTENTOS (VECES QUE INGRESO UNA PALABRA)
   
-  # try:
-  #   archivo = open("archivos/ranking.csv")
-  #   archivo.close()
-  # except FileNotFoundError:
-  #   archivo = open("archivos/ranking.csv","w")
-  #   archivo.close()
+  
+  
+  archivo = open("archivos/partidas.csv","a+")
+  for jugador,data in estadisticas_finales_jugadores.items():
+    archivo.write(f"{data[1]},{data[2]},{jugador},{data[3]},{data[4]},{data[0]}\n")
+  archivo.close()
+  

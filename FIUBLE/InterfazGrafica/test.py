@@ -1,3 +1,9 @@
-from datetime import datetime
+def format(linea,cant):
+  return linea.strip("\n").split(",") if linea != "" else [""]*cant
 
-print(datetime.today().strftime("%H:%M:%S"))
+archivo = open("archivos/ranking.csv")
+linea = format(archivo.readline(),5)
+while linea[0] !="":
+  print(linea)
+  linea = format(archivo.readline(),5)
+archivo.close()
