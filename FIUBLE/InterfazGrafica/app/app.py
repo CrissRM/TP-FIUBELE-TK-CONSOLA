@@ -4,7 +4,7 @@ from initialSetting.datos_iniciales import obtener_color
 from time import time
 
     
-def application(datos_iniciales):
+def application(datos_iniciales,dicc_jugadores):
   print("\x1b[33m*****************************************************************\x1b[0m")
   print("\x1b[33m**************************JUEGO INICIADO*************************\x1b[0m")
   
@@ -27,6 +27,12 @@ def application(datos_iniciales):
     
     palabra = validar_condicion_palabra()
     
+    for player,data in dicc_jugadores.items():
+      if player == turno:
+        data[4] +=1
+
+
+
     if validar_palabra(palabra,palabra_secret):
       es_ganador=True 
       ganador_parcial = turno

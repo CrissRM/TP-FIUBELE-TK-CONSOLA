@@ -5,17 +5,17 @@ def contabilizar_puntos(puntos,ganador_parcial,turno,dicc_jugadores):
     
     for key in dicc_jugadores:
       if key == turno:
-        dicc_jugadores[key] += puntos 
+        dicc_jugadores[key][0] += puntos 
       else:
-        dicc_jugadores[key] += puntos+50
+        dicc_jugadores[key][0] += puntos+50
   
   else:
     
     for key in dicc_jugadores:
       if key == turno:
-        dicc_jugadores[key] += puntos
+        dicc_jugadores[key][0] += puntos
       else:
-        dicc_jugadores[key] += -puntos
+        dicc_jugadores[key][0] += -puntos
 
   
   return dicc_jugadores

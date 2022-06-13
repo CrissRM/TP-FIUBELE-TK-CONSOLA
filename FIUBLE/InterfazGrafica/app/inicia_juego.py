@@ -2,10 +2,12 @@ import os
 from time import time
 from random import choice
 from initialSetting.modulos import condiciones_iniciales
-from helpers.modulos import alternador_turnos,contar_puntos,contabilizar_puntos,parcial_juego
 from app.app import application
+from datetime import datetime
+from helpers.modulos import alternador_turnos,contar_puntos,contabilizar_puntos,parcial_juego
 
-def inicial_juego(jugadores):
+
+def inicia_juego(jugadores):
   os.system("clear")
   os.system("cls")
   turno = choice(jugadores) 
@@ -13,7 +15,13 @@ def inicial_juego(jugadores):
   init_jugadores = dict()
   
   for jugador in jugadores:
-    init_jugadores.setdefault(jugador,condiciones_iniciales()["puntos_acomulados_jugador"])
+    puntos_iniciales = condiciones_iniciales()["puntos_acomulados_jugador"]
+    fecha = datetime.today().strftime("%d-%m-%Y")
+    hora_finalizacion = ""
+    aciertos = 0
+    intentos = 0
+    
+    init_jugadores.setdefault(jugador,[puntos_iniciales,fecha,hora_finalizacion,aciertos,intentos])
   
   res="s"
   numero_partida = 0
@@ -27,7 +35,7 @@ def inicial_juego(jugadores):
     
     datos_iniciales["turno"] = turno
     
-    ronda_terminada = application(datos_iniciales)
+    ronda_terminada = application(datos_iniciales,init_jugadores)
       
     ronda_terminada["inicia_juego"] = inicia_juego
       
