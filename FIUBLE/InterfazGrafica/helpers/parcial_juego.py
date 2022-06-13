@@ -1,4 +1,4 @@
-from helpers.msg_puntos_parciales import msg_puntos_parciales
+from helpers.modulos import msg_puntos_parciales
 
 def parcial_juego(ronda_terminada,dicc_jugadores,puntos):
   

@@ -1,4 +1,7 @@
-from importaciones.import_file import Label,Entry,Frame,FrameHidden,Button,style_button,style_entry,style_label,estilos,volver,guardar
+from componentes.modulos import Label,Entry,Frame,FrameHidden,Button
+from initialSetting.modulos import style_button,style_entry,style_label,estilos
+from funcionalidadButtonTk.modulos import volver
+
 
 def formulario_registro(root,btn_registro,btn_ingreso):
   form_registro = FrameHidden(root)

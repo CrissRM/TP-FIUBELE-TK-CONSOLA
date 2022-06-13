@@ -1,4 +1,4 @@
-from initialSetting.datos_iniciales import obtener_color
+from initialSetting.modulos import obtener_color
 
 def analizar_palabra(palabra,palabra_lista):
   """

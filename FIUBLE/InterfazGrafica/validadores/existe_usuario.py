@@ -12,6 +12,3 @@ def existe_usuario(nombre):
       pass
     
   return existe
-
-      
-    

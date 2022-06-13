@@ -1,4 +1,7 @@
-from importaciones.import_file import FrameHidden,Frame,Label,Entry,Button,estilos,style_button,style_entry,style_label,volver,acceder
+from componentes.modulos import FrameHidden,Frame,Label,Entry,Button
+from initialSetting.modulos import style_button,style_entry,style_label,estilos
+from funcionalidadButtonTk.modulos import volver,acceder
+
 
 def formulario_ingreso(root,btn_registro,btn_ingreso,jugadores,cant,inicia_app):
   

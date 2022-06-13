@@ -1,4 +1,4 @@
-from tkinter import messagebox as mb
+from componentes.modulos import msg_error,msg_warning
 
 def validar_nombre(nombre):
   if 4<= len(nombre) <=15:
@@ -10,12 +10,12 @@ def validar_nombre(nombre):
         error = True
       i +=1
     if error:
-      mb.showerror("Error","El nombre solo acepta caracteres alfabéticos, numéricos y el guión bajo")
+      msg_error("El nombre solo acepta caracteres alfabéticos, numéricos y el guión bajo")
       res = False
     else:
       res = True
   else:
-    mb.showwarning("Advertencia","El nombre debe no puede tener menos de 4 o más de 15 caracteres")
+    msg_warning("El nombre debe no puede tener menos de 4 o más de 15 caracteres")
     res = False
   return res
   

@@ -1,4 +1,4 @@
-from helpers.mensaje_para_usuario import mensaje_para_usurio
+from helpers.modulos import mensaje_para_usurio
 
 def msg_puntos_parciales(puntos,ronda_terminada,dicc_jugadores):
 

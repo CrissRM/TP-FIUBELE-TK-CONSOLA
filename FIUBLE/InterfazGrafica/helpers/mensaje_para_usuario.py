@@ -1,4 +1,4 @@
-from helpers.formatear_tiempo import formatear_tiempo
+from helpers.modulos import formatear_tiempo
 
 def mensaje_para_usurio(dicc_jugadores,puntos_ronda,ronda_terminada):
   

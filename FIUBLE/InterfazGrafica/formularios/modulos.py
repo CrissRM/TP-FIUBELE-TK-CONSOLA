@@ -1,0 +1,2 @@
+from formularios.formulario_ingreso import formulario_ingreso
+from formularios.formulario_registro import formulario_registro

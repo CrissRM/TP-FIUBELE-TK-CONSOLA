@@ -1,10 +1,6 @@
-from componentes.MsgBox import msg_warning,msg_error,msg_info,msg_confirm
-from validadores.validar_nombre import validar_nombre
-from validadores.validar_contrasenia import validar_contrasenia
-from validadores.existe_usuario import existe_usuario
-from validadores.inicio_sesion import inicio_sesion 
-from helpers.grabar_datos import grabar_datos
-
+from helpers.modulos import grabar_datos
+from componentes.modulos import msg_confirm,msg_error,msg_info,msg_warning
+from validadores.modulos import validar_nombre,validar_contrasenia,existe_usuario,inicio_sesion
 
 def volver(argumentos):
   frame_hidden,btn_registro,btn_ingreso = argumentos

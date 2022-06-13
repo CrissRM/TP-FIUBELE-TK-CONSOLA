@@ -1,5 +1,6 @@
 import tkinter as tk
-from helpers.estilos_formatos import estilos
+from initialSetting.modulos import estilos
+# from helpers.estilos_formatos import estilos
 
 def Entry(estilos):
   if estilos["is_password"]:

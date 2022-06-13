@@ -1,5 +1,5 @@
-from componentes.MsgBox import msg_error
-from helpers.formato_linea import formato_linea
+from componentes.modulos import msg_error
+from helpers.modulos import formato_linea
 
 def inicio_sesion(nombre,contrasenia):
   existe = False

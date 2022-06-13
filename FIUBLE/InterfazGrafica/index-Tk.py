@@ -1,16 +1,11 @@
 import tkinter as tk
-from componentes.MsgBox import msg_error, msg_info, msg_warning
-from componentes.FrameHidden import FrameHidden
-from helpers.estilos_formatos import estilos
-from formularios.formulario_registro import formulario_registro
-from formularios.formulario_ingreso import formulario_ingreso
-from componentes.Label import Label
-from componentes.Button import Button
-from componentes.Frame import Frame
-from componentes.Entry import Entry
 from app.app_consola import inicia_app
-from estilos_formatos import estilos,style_label,style_button,style_entry
-from funcionalidadButtonTk.actions_button import volver
+from initialSetting.modulos import estilos,style_button,style_label,style_entry
+from formularios.modulos import formulario_registro,formulario_ingreso
+from funcionalidadButtonTk.modulos import volver
+from componentes.modulos import msg_error,msg_info,msg_warning,FrameHidden,Label,Button,Frame,Entry
+
+
 
 def btn_registrarse(not_argument):
   form_registro = formulario_registro(root,registro,ingresar)

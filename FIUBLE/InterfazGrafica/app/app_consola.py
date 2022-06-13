@@ -1,4 +1,5 @@
-from importaciones.import_file import inicial_juego,fin_juego
+from app.inicial_juego import inicial_juego
+from validadores.modulos import fin_juego
 
 def inicia_app(jugadores):  
   estadisticas_finales = inicial_juego(jugadores)

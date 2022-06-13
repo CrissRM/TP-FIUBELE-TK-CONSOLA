@@ -1,4 +1,9 @@
-from importaciones.import_file import os,time,choice,condiciones_iniciales,alternador_turnos,contar_puntos,contabilizar_puntos,parcial_juego,application
+import os
+from time import time
+from random import choice
+from initialSetting.modulos import condiciones_iniciales
+from helpers.modulos import alternador_turnos,contar_puntos,contabilizar_puntos,parcial_juego
+from app.app import application
 
 def inicial_juego(jugadores):
   os.system("clear")

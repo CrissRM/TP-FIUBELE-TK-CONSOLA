@@ -1,4 +1,4 @@
-from tkinter import messagebox as mb
+from componentes.modulos import msg_error
 
 caracteres_validos ={
   "A":1,"Á":1,
@@ -104,31 +104,31 @@ def validar_contrasenia(password,error = False,exceso_char=False):
 
     if not error:
       if cont_mayusculas == 0:
-        mb.showerror("Error","La contraseña debe contener por lo menos una letra mayúsculas")
+        msg_error("La contraseña debe contener por lo menos una letra mayúsculas")
         res = False
       elif cont_minusculas == 0:
-        mb.showerror("Error","La contraseña debe contener por lo menos una letra minúscula")
+        msg_error("La contraseña debe contener por lo menos una letra minúscula")
         res = False
       elif cont_numero == 0:
-        mb.showerror("Error","La contraseña debe contener por lo menos un numero")
+        msg_error("La contraseña debe contener por lo menos un numero")
         res = False
       elif (cont_guion >0 and cont_guion_bajo >0):
-        mb.showerror("Error","La contraseña debe contener alguno de los caracteres '-' o '_'  pero no ambos")
+        msg_error("La contraseña debe contener alguno de los caracteres '-' o '_'  pero no ambos")
         res = False
       elif cont_guion == 0 and cont_guion_bajo==0:
-        mb.showerror("Error","La contraseña debe contener alguno de los caracteres '-' o '_'")
+        msg_error("La contraseña debe contener alguno de los caracteres '-' o '_'")
         res = False
       elif (cont_guion>1 and cont_guion_bajo==0) or (cont_guion_bajo>1 and cont_guion ==0):
-        mb.showerror("Error","La contraseña no puede tener mas un un'-' ó un '_'")
+        msg_error("La contraseña no puede tener mas un un'-' ó un '_'")
         res =False
       else:
         res = True
     else:
-      mb.showerror("Error","La contraseña debe estar compuesta solo por caracteres alfanuméricos excepto por alguno de los caractres '_' ó '-'")
+      msg_error("La contraseña debe estar compuesta solo por caracteres alfanuméricos excepto por alguno de los caractres '_' ó '-'")
       res = False
       error = True
   else:
-    mb.showerror("ERROR","La contraseña debe tener mas de 8 caracteres y menos de 12")
+    msg_error("La contraseña debe tener mas de 8 caracteres y menos de 12")
     res = False
 
   

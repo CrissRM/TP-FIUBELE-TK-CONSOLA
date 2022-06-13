@@ -1,5 +1,5 @@
 from random import choice
-from helpers.obtener_palabras_validas import obtener_palabras_validas
+from helpers.modulos import obtener_palabras_validas
 
 def iniciar_tablero(cantidad_letras):
   tablero=[]

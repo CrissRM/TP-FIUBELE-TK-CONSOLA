@@ -1,11 +1,7 @@
-from validadores.validar_condicion_palabra import validar_condicion_palabra 
-from validadores.validar_palabra import validar_palabra
-from validadores.analizar_palabra import analizar_palabra
+from helpers.modulos import alternador_turnos,mensaje_turno_de
+from validadores.modulos import validar_condicion_palabra,validar_palabra,analizar_palabra
 from initialSetting.datos_iniciales import obtener_color
-from helpers.alternador_turnos import alternador_turnos
-from helpers.mensaje_turno_de import mensaje_turno_de
 from time import time
-# from importaciones.import_file import validar_palabra,analizar_palabra,obtener_color,alternador_turnos,mensaje_turno_de,time,validar_condicion_palabra
 
     
 def application(datos_iniciales):
