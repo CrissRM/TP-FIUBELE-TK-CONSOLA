@@ -22,7 +22,6 @@ def analizador_palabras_texto1(texto1):
                     palabras.setdefault(i.lower(),[1,0,0])
         palabra=leer_Archivo(texto1)
 
-
 def analizador_palabras_texto2(texto2):
     palabra=leer_Archivo(texto2)
     while (palabra !=""):
@@ -33,8 +32,6 @@ def analizador_palabras_texto2(texto2):
                 else:
                     palabras.setdefault(i.lower(),[0,1,0])
         palabra=leer_Archivo(texto2)
-    
-   
 
 def analizador_palabras_texto3(texto3):
     palabras_texto3={}
@@ -54,11 +51,11 @@ def ordenar_palabras(texto4):
         grabar_Nuevo(texto4,elementos[0],elementos[1][0],elementos[1][1],elementos[1][2])
     return palabras_ordenadas
 
-texto1=open("Cuentos.csv","r")
-texto2=open("La araña negra - tomo 1.csv","r")
-texto3=open("Las 1000 Noches y 1 Noche.csv","r")
-texto4=open("FIUBLE/InterfazGrafica/jugadores.csv","w")
-# texto4=open("palabras.csv","w")
+texto1=open("../archivos/Cuentos.csv","r")
+texto2=open("../archivos/La araña negra - tomo 1.csv","r")
+texto3=open("../archivos/Las 1000 Noches y 1 Noche.csv","r")
+texto4=open("../archivos/palabras.csv","w")
+
 analizador_palabras_texto1(texto1)
 analizador_palabras_texto2(texto2)
 analizador_palabras_texto3(texto3)

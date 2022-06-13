@@ -1,5 +1,3 @@
-from os import path
-
 def formatear_ruta(ruta):
   path_file = ""
   for letter in ruta:
@@ -11,11 +9,8 @@ def formatear_ruta(ruta):
 
 
 def obtener_palabras_validas(CANT_LETRAS):
-  ruta = "C:/Users/Commodore/Desktop/TP-GITHUB/FIUBLE/InterfazGrafica/archivos_palabras/palabras.csv"
-  
-  # ruta = formatear_ruta(path.abspath("../archivos_palabras/palabras.csv"))
-  # print(ruta)
-  archivo = open(ruta)
+
+  archivo = open("archivos/palabras.csv")
   
   lista_palabra_secreta = []
   palabra = archivo.readline().split(",")[0]
