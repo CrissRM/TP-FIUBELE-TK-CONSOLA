@@ -1,4 +1,5 @@
 import operator
+
 def leer_Archivo(archivo):
     linea = archivo.readline()
     if linea !="":

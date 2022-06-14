@@ -2,18 +2,20 @@ from helpers.handler_files import archivo_close,archivo_open,formato_linea
 
 def obtener_mejores_puntuaciones():
   archivo = archivo_open("archivo/partidas.csv")
+
   archivo_close(archivo)
 
 
 #-------------------------------- FRAME RANKING--------------------------------
-# archivo = archivo_open("archivos/ranking.csv")
+# texto = "JUFADOR PUNTOS\n"
 
-# texto = "FECHA   HORA FINALAIZACION   NOMBRE   ACIERTOS   INTENTOS\n"
+# archivo = archivo_open("archivos/PARTIDAS.csv")
+
 
 # linea = formato_linea(archivo.readline(),5)
 
 # while linea[0] !="":
-#   texto +=f"{linea[0]}    -   {linea[1]}   -   {linea[2]}   -   {linea[3]}   -   {linea[4]}\n"
+#   texto +=f"{linea[0]}    -   {linea[1]}\n"
 #   linea = formato_linea(archivo.readline(),5)
 
 # archivo_close(archivo)
