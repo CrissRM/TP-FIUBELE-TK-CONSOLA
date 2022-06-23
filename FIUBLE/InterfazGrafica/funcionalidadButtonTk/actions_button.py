@@ -26,29 +26,6 @@ def acceder(argumentos):
   else:
     msg_error("Contraseña y/o usuario no son incorrectas")
 
-  # if nombre =="":
-  #   msg_warning("El campo nombre es requerido")
-  # else:
-  #   usuario_valido = validar_nombre(nombre)
-
-  # if password =="":
-  #   msg_warning("El campo contraseña es requerido")
-  # else:
-  #   password_valida = validar_contrasenia(password)
-    
-  # if usuario_valido and password_valida:
-  #   if inicio_sesion(nombre,password):
-  #     if nombre in jugadores:
-  #       msg_warning(f"El usuario {nombre} ya inicio sesión  ")
-  #     else:
-  #       jugadores.append(nombre)
-  #       msg_info("Sesión Iniciada correctamente")
-  #       nombre_entry.delete(0,"end")
-  #       clave_entry.delete(0,"end")
-        
-  #   else:
-  #     msg_error("Contraseña y/o usuario no son incorrectas")
-  
   if len(jugadores) == cant:
     root.destroy()
     inicia_app(jugadores)

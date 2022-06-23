@@ -1,6 +1,7 @@
 from random import choice
 from helpers.modulos import obtener_palabras_validas,archivo_open,archivo_close,formato_linea
 
+
 def iniciar_tablero(cantidad_letras):
   tablero=[]
   for i in range(cantidad_letras):
@@ -19,9 +20,10 @@ def obtener_color(letra,color):
   return colores[color] + letra + colores["ENDC"]
 
 def condiciones_iniciales():
+  print("cargando..")
   configuraciones = []
   archivo = archivo_open("archivos/configuracion.csv")
-  linea = formato_linea(archivo.readline(),2)[1]
+  linea = formato_linea(archivo.readline(),2)[1] 
   while linea !="":
     configuraciones.append(linea)
     linea = formato_linea(archivo.readline(),2)[1]
@@ -33,7 +35,7 @@ def condiciones_iniciales():
   
   return {
     "tablero": iniciar_tablero(int(LONGITUD_PALABRA_SECRETA)),
-    "palabra_secret": choice(obtener_palabras_validas(int(LONGITUD_PALABRA_SECRETA))),
+    "palabra_secret": choice(obtener_palabras_validas()),
     "es_ganador": False,
     "contador_credito": 0,
     "contador_credito_max": int(CREDITOS_MAX), 
@@ -41,5 +43,6 @@ def condiciones_iniciales():
     "cantidad_jugadores": int(CANTIDAD_MAX_JUGADORES),
     "cantidad_letras": int(LONGITUD_PALABRA_SECRETA),
     "max_partidas": int(MAXIMO_PARTIDAS),
-    "reiniciar_archivo_partidas": bool(REINICIAR_ARCHIVO_PARTIDAS)
+    "reiniciar_archivo_partidas": bool(REINICIAR_ARCHIVO_PARTIDAS),
+    "max_long_letras": 12 
   }

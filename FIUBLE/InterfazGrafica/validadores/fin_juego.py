@@ -1,4 +1,5 @@
 from datetime import datetime
+from helpers.write_config import write_archivo
 
 def fin_juego(estadisticas_finales_jugadores):
   print("\n\n","*"*75)
@@ -31,4 +32,7 @@ def fin_juego(estadisticas_finales_jugadores):
   for jugador,data in estadisticas_finales_jugadores.items():
     archivo.write(f"{data[1]},{data[2]},{jugador},{data[3]},{data[4]},{data[0]}\n")
   archivo.close()
+
+  write_archivo(7,5,False)
+
   

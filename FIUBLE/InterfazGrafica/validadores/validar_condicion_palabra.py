@@ -1,5 +1,5 @@
 from helpers.modulos import formatear_palabra
-from initialSetting.modulos import condiciones_iniciales
+from initialSetting.datos_iniciales import condiciones_iniciales
 
 def validar_condicion_palabra():
   """

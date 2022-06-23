@@ -30,7 +30,7 @@ def mensaje_for(dicc_jugadores,puntos_ronda,ronda_terminada):
 
 def mensaje_para_usurio(dicc_jugadores,puntos_ronda,ronda_terminada):
   print("\n\x1b[33m","*"*33,"PUNTAJES","*"*33,"\x1b[0m")
-  print("\n\x1b[33m"," "*20,f"{'JUGADOR':15} | {'PUNTOS':6} | {'ACOMULADO':9} |\x1b[0m")
+  print("\n\x1b[33m"," "*20,f"{'JUGADOR':15} | {'PUNTOS':6} | {'ACUMULADO':9} |\x1b[0m")
   
   if ronda_terminada["ganador_parcial"]:
     sumar_acierto(ronda_terminada,dicc_jugadores)
